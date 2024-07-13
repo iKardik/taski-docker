@@ -8,7 +8,6 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
-    # Блок services аналогичен docker-compose.yml
     services:
       postgres:
         image: postgres:13.10
@@ -118,7 +117,6 @@ jobs:
         with:
           context: ./gateway/
           push: true
-          # Тут вместо username должен быть ваш логин на Docker Hub
           tags: ikardik/taski_gateway:latest
   deploy:
     runs-on: ubuntu-latest
